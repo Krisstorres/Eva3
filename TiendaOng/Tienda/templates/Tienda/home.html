@@ -13,12 +13,21 @@
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
       </div>
     
+     
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+    
       <div class="carousel-inner">
           {% load static %}
         <div class="carousel-item active">
-          <img src="{% static 'Tienda/img/active2.jpg'%}" class="d-block w-100" alt="..." id="picture">
+          <img  src="{% static 'Tienda/img/active2.jpg'%}" class="d-block w-100" alt="..." id="picture">
           <div class="carousel-caption d-none d-md-block">
-            <a href="#"  id="div-btn5" class="activee" ><h5>Sobre Nosotros</h5></a>
+            <a href="{% url 'Quienes somos' %}"  id="div-btn5" class="activee" ><h5>Sobre Nosotros</h5></a>
           </div>
         </div>
     
@@ -26,7 +35,7 @@
           {% load static %}
           <img src="{% static 'Tienda/img/tienda1.jpg'%}" class="d-block w-100" alt="..." id="picture">
           <div class="carousel-caption d-none d-md-block">
-            <a href="#"  id="div-btn6" class="activee"><h5>Conoce Nuestra Tienda</h5></a>
+            <a href="{% url 'Tiendas' %}"  id="div-btn6" class="activee"><h5>Conoce Nuestra Tienda</h5></a>
           </div>
         </div>
     
@@ -34,7 +43,7 @@
           {% load static %}
           <img src="{% static 'Tienda/img/img3.jpg'%}" class="d-block w-100" alt="..." id="picture" >
           <div class="carousel-caption d-none d-md-block">
-            <a href="#"  id="div-btn7" class="activee"><h5>Dona a refugios de animales</h5></a>
+            <a href="{% url 'Donaciones' %}"  id="div-btn7" class="activee"><h5>Dona a refugios de animales</h5></a>
           </div>
         </div>
     
@@ -42,7 +51,7 @@
           {% load static %}
           <img src="{% static 'Tienda/img/img2.jpg'%}" class="d-block w-100" alt="..." id="picture">
           <div class="carousel-caption d-none d-md-block">
-            <a href="#"  id="div-btn8" class="activee"><h5>Contactanos</h5></a>
+            <a href="{% url 'contacto' %}"  id="div-btn8" class="activee"><h5>Contactanos</h5></a>
           </div>
         </div>
         
