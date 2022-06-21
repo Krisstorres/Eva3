@@ -1,5 +1,6 @@
+from unicodedata import name
 from django.urls import path
-from .views import Listar_prod, home,Contacto,QuienesSomos,Donaciones,Tiendas, Agregar_prod,Modificar_prod,Eliminar_prod
+from .views import Agregar_F, Listar_prod, home,Contacto,QuienesSomos,Donaciones,Tiendas, Agregar_prod,Modificar_prod,Eliminar_prod
 
 urlpatterns = [
     path('', home,name="home"),
@@ -16,4 +17,6 @@ urlpatterns = [
     path('Modificar_prod/<id>/',Modificar_prod,name="Modificar"),
 
     path('Eliminar_prod/<id>/',Eliminar_prod,name="Eliminar"),
+
+    path('Agregar_F/',Agregar_F,name="Agregar_F"),
 ]
