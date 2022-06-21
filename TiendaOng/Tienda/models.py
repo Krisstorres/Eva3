@@ -71,3 +71,11 @@ class Productoww(models.Model):
     categorias=models.ForeignKey(CATEGORIASS,on_delete=models.PROTECT)
     def __str__(self):
         return(self.nombre)
+    
+class Fundaciones(models.Model):
+    nombre_fundacion=models.CharField(max_length=50,blank=False,verbose_name='Nombre Fundacion')
+    rut_fundacion=models.CharField(max_length=50,blank=False,verbose_name='Rut Fundacion')
+    foto_imagen=models.ImageField(upload_to="productos",null=True)
+    cuenta_fundacion=models.IntegerField(blank=False,verbose_name='Numero de cuenta')
+    def __str__(self):
+        return(self.nombre_fundacion)
