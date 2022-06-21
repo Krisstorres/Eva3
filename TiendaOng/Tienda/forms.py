@@ -1,7 +1,7 @@
 from dataclasses import field, fields
 from tkinter import Widget
 from django import forms
-from .models import Contacto, Productoww
+from .models import Contacto, Fundaciones, Productoww
 #se crea un nuevo archivo para guardar el formulario y encapsular las validaciones 
 class ContactoForm(forms.ModelForm):
 
@@ -20,5 +20,16 @@ class ProductoForm(forms.ModelForm):
         model=Productoww
         fields='__all__'
         Widgets={"fecha_fabricacion":forms.SelectDateWidget()}
+        
+        
+        
+
+class FundacionForm(forms.ModelForm):
+
+    class Meta: 
+        model=Fundaciones
+        fields='__all__'
+
+
 
 
